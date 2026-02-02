@@ -8,6 +8,9 @@ export const metadata = {
     description: 'Browse all blog posts on web development, SEO, and technology.',
 };
 
+export const dynamic = 'force-dynamic';
+
+
 async function getBlogData(searchParams) {
     try {
         const page = searchParams?.page || 1;

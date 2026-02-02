@@ -8,6 +8,9 @@ export const metadata = {
     description: 'Discover the latest blog posts on web development, SEO, and technology trends.',
 };
 
+export const dynamic = 'force-dynamic';
+
+
 async function getLatestBlogs() {
     try {
         const data = await getBlogs({ limit: 6 });

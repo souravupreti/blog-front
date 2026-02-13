@@ -16,7 +16,7 @@ export const metadata = {
         address: false,
         telephone: false,
     },
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://blog-front-peach-delta.vercel.app'),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://pencilpost.vercel.app'),
     openGraph: {
         type: 'website',
         locale: 'en_US',

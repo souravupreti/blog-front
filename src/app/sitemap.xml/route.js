@@ -14,7 +14,10 @@ export async function GET() {
             return new NextResponse('Error fetching sitemap', { status: response.status });
         }
 
-        const sitemap = await response.text();
+        let sitemap = await response.text();
+
+        // Replace old domain with new domain
+        sitemap = sitemap.replaceAll('blog-front-peach-delta.vercel.app', 'pencilpost.vercel.app');
 
         return new NextResponse(sitemap, {
             headers: {

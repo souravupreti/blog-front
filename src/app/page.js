@@ -25,9 +25,7 @@ export default async function HomePage() {
     const blogs = await getLatestBlogs();
 
     return (
-        <head>
-                <link rel="canonical" href="https://pencilpost.vercel.app/" />
-            </head>
+
         <div className={styles.home}>
             {/* Hero Section */}
             <section className={styles.hero}>

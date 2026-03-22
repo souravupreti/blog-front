@@ -45,7 +45,9 @@ export async function generateMetadata({ params }) {
                 images: [blog.ogImage || '/images/og-default.jpg'],
             },
             alternates: {
-                canonical: blog.canonicalUrl || `/blog/${blog.slug}`,
+                canonical: blog.canonicalUrl?.startsWith('http') 
+                    ? blog.canonicalUrl 
+                    : `${process.env.NEXT_PUBLIC_SITE_URL || 'https://pencilpost.vercel.app'}${blog.canonicalUrl || `/blog/${blog.slug}`}`,
             },
         };
     } catch (error) {

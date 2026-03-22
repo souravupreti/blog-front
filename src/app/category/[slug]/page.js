@@ -16,9 +16,14 @@ export async function generateMetadata({ params }) {
             };
         }
 
+        const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://pencilpost.vercel.app';
+
         return {
             title: `${category.name} - Blog Category`,
             description: category.description || `Browse all blog posts in the ${category.name} category`,
+            alternates: {
+                canonical: `${baseUrl}/category/${slug}`,
+            },
         };
     } catch (error) {
         return {

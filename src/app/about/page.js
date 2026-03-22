@@ -3,6 +3,9 @@ import styles from '../../styles/About.module.css';
 export const metadata = {
     title: 'About Us',
     description: 'Learn more about our SEO blog platform and our mission to deliver quality content.',
+    alternates: {
+        canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://pencilpost.vercel.app'}/about`,
+    },
 };
 
 export default function AboutPage() {
